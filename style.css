@@ -4,3 +4,12 @@ body{
     margin: 0;
     overflow: hidden;
 }
+
+.corner-window{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
