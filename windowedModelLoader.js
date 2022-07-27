@@ -10,7 +10,7 @@ function botModel(){
     sceneWin = new THREE.Scene();
     sceneWin.background = new THREE.Color(0x333333);
 
-    cameraWin = new THREE.PerspectiveCamera(40,window.innerWidth / window.innerHeight,1,5000);
+    cameraWin = new THREE.PerspectiveCamera(40,windowedWidth / windowedHeight,1,5000);
     cameraWin.rotation.y = 45/180*Math.PI;
     cameraWin.position.x = 800;
     cameraWin.position.y = 300;
