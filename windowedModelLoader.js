@@ -4,7 +4,7 @@ var windowed = document.getElementById('windowed');
 var windowedWidth = document.getElementById('windowed').clientWidth;
 var windowedHeight = document.getElementById('windowed').clientHeight;
 
-function botModel(){
+function tankModel(){
     const spotlightColor = 0x111111;
 
     sceneWin = new THREE.Scene();
@@ -70,4 +70,4 @@ function renderWin(){
     rendererWin.render(sceneWin, cameraWin);
 }
 
-botModel();
+tankModel();
