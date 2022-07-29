@@ -17,8 +17,8 @@ function tankModel(){
     cameraWin.position.z = 200;
 
     window.addEventListener('resize', function(){
-        var WIDTH = window.innerWidth,
-            HEIGHT = window.innerHeight;
+        var WIDTH = windowedWidth,
+            HEIGHT = windowedHeight;
         rendererWin.setSize(WIDTH,HEIGHT);
         cameraWin.aspect = WIDTH / HEIGHT;
         cameraWin.updateProjectionMatrix();
@@ -30,18 +30,18 @@ function tankModel(){
     document.body.appendChild(windowed);
     windowed.appendChild(rendererWin.domElement);
 
-    controls = new THREE.OrbitControls(cameraWin, rendererWin.domElement);
-    controls.addEventListener('change', renderWin);
+    controlsWin = new THREE.OrbitControls(cameraWin, rendererWin.domElement);
+    controlsWin.addEventListener('change', renderWin);
 
-    hlight = new THREE.AmbientLight(spotlightColor,100);
-    sceneWin.add(hlight);
+    hlightWin = new THREE.AmbientLight(spotlightColor,100);
+    sceneWin.add(hlightWin);
 
     directionalLight = new THREE.DirectionalLight(spotlightColor,100); //0xc5c5c5
     directionalLight.position.set(0,1,0);
     directionalLight.castShadow = true;
     sceneWin.add(directionalLight);
 
-    light = new THREE.PointLight(spotlightColor,10);
+    /*light = new THREE.PointLight(spotlightColor,10);
     light.position.set(0,300,500);
     sceneWin.add(light);
 
@@ -55,10 +55,10 @@ function tankModel(){
 
     light4 = new THREE.PointLight(spotlightColor,10);
     light4.position.set(-500,300,0);
-    sceneWin.add(light4);                        
+    sceneWin.add(light4);  */                      
 
     let loaderWin = new THREE.GLTFLoader();
-    loaderWin.load("windowedModel/scene.gltf", function(gltf){        
+    loaderWin.load("tankModel/scene.gltf", function(gltf){        
         bot = gltf.scene.children[0];
         bot.scale.set(150,150,150);
         sceneWin.add(gltf.scene);

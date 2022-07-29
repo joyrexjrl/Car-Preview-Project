@@ -25,11 +25,11 @@ function carModel(){
     rendererFS.setSize(window.innerWidth,window.innerHeight);
     document.body.appendChild(rendererFS.domElement);
 
-    controls = new THREE.OrbitControls(cameraFS, rendererFS.domElement);
-    controls.addEventListener('change', renderFS);
+    controlsFS = new THREE.OrbitControls(cameraFS, rendererFS.domElement);
+    controlsFS.addEventListener('change', renderFS);
 
-    hlight = new THREE.AmbientLight(0x404040,100);
-    sceneFS.add(hlight);
+    hlightFS = new THREE.AmbientLight(0x404040,100);
+    sceneFS.add(hlightFS);
 
     directionalLight = new THREE.DirectionalLight(spotlightColor,100);
     directionalLight.position.set(0,1,0);
@@ -53,7 +53,7 @@ function carModel(){
     sceneFS.add(light4);                        
 
     let loader = new THREE.GLTFLoader();
-    loader.load("fullscreenModel/scene.gltf", function(gltf){
+    loader.load("carModel/scene.gltf", function(gltf){
         car = gltf.scene.children[0];
         car.scale.set(0.5,0.5,0.5);
         sceneFS.add(gltf.scene);
