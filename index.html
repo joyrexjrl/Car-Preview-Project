@@ -18,9 +18,27 @@
     </nav>    
     <main class="container">
         <section class="top-model-display flex">
-            <div id="fwd-model" class="top-model-display-container"></div>
-            <div id="rwd-model" class="top-model-display-container"></div>
-            <div id="awd-model" class="top-model-display-container"></div>
+            <div class="top-model-display-container">
+                <div id="fwd-left-window" class="model-loaded fwd-window">
+                    
+                </div>
+            </div>
+            <div class="top-model-display-container">
+                <div id="fwd-center-window" class="model-loaded fwd-window model-unloaded">
+                    
+                </div>
+                <div id="rwd-center-model"  class="model-loaded rwd-window">
+
+                </div>
+                <div id="awd-center-window" class="model-loaded awd-window model-unloaded">
+
+                </div>
+            </div>
+            <div class="top-model-display-container">
+                <div id="awd-right-window" class="model-loaded">
+
+                </div>
+            </div>
         </section>
         <section class="form-display flex">
             <form class="form-questions" action="" class="main-form">
@@ -77,13 +95,14 @@
                 </div>
 
             </form>
-            <div class="model-display-window">
-
+            
+            <div id="model-display-window" class="model-display-window">                
+                <script src="fwdVehicleModelLoader.js"></script>
             </div>
         </section>
-    </main>
+    </main>    
     <footer class="footer-nav">
 
-    </footer>
+    </footer>    
 </body>
 </html>

@@ -1,8 +1,8 @@
 let sceneWin, cameraWin, rendererWin;
 
-var windowed = document.getElementById('windowed');
-var windowedWidth = document.getElementById('windowed').clientWidth;
-var windowedHeight = document.getElementById('windowed').clientHeight;
+var windowed = document.getElementById('fwd-model');
+var windowedWidth = document.getElementById('fwd-model').clientWidth;
+var windowedHeight = document.getElementById('fwd-model').clientHeight;
 
 function tankModel(){
     const spotlightColor = 0x111111;
@@ -42,7 +42,7 @@ function tankModel(){
     sceneWin.add(directionalLight);                      
 
     let loaderWin = new THREE.GLTFLoader();
-    loaderWin.load("tankModel/scene.gltf", function(gltf){        
+    loaderWin.load("awdVehicleModel/scene.gltf", function(gltf){        
         bot = gltf.scene.children[0];
         bot.scale.set(150,150,150);
         sceneWin.add(gltf.scene);
