@@ -9,12 +9,81 @@
     <title>Document</title>
     <script src="jsCore/three.min.js"></script>
     <script src="jsCore/GLTFLoader.js"></script>
-    <script src="jsCore/OrbitControls.js"></script>  
+    <script src="jsCore/OrbitControls.js"></script>
+    <script src="checkboxSelector.js"></script>
 </head>
-<body id="fullscreen">    
-    <script src="carModelLoader.js"></script>    
-    <div id="windowed" class="corner-window">
-        <script src="tankModelLoader.js"></script>
-    </div>    
+<body>
+    <nav class="main-nav">
+
+    </nav>    
+    <main class="container">
+        <section class="top-model-display flex">
+            <div id="fwd-model" class="top-model-display-container"></div>
+            <div id="rwd-model" class="top-model-display-container"></div>
+            <div id="awd-model" class="top-model-display-container"></div>
+        </section>
+        <section class="form-display flex">
+            <form class="form-questions" action="" class="main-form">
+                <div class="question-one">
+                    <div class="drive-type flex">
+                        <div class="flex col">
+                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <label for="drive-type">Front wheel drive</label>                        
+                        </div>
+                        
+                        <div class="flex col">
+                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <label for="drive-type">Rear wheel drive</label>                        
+                        </div>
+                        
+                        <div class="flex col">
+                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <label for="drive-type">All wheel drive</label>                        
+                        </div>                    
+                    </div>
+                </div>
+                <div class="question-two flex col">
+                    <div id="fwd" class="drive-options">
+                        <select class="drive-options-select" name="fwd">
+                            <option value="--select-a-vehicle--">--Select a vehicle--</option>
+                            <option value="honda-accord">Honda Accord</option>
+                            <option value="honda-civic-type-r">Honda Civic Type R</option>
+                            <option value="volvo-v90">Volvo V90</option>
+                            <option value="mercedes-a-class">Mercedes A Class</option>
+                        </select>
+                    </div>
+                    <div id="rwd" class="drive-options">
+                        <select class="drive-options-select" name="rwd">
+                            <option value="--select a vehicle--">--Select a vehicle--</option>
+                            <option value="chevrolet-camaro">Chevrolet Camaro</option>
+                            <option value="ford-mustang">Ford Mustang</option>
+                            <option value="genesis-g70">Genesis G70</option>
+                            <option value="kia-stinger">Kia Stinger</option>
+                        </select>
+                    </div>
+                    <div id="awd" class="drive-options">
+                        <select class="drive-options-select" name="awd">
+                            <option value="--select a vehicle--">--Select a vehicle--</option>
+                            <option value="subaru-impreza">Subaru Impreza</option>
+                            <option value="toyota-highlander">Toyota Highlander</option>
+                            <option value="ford-escape">Ford Escape</option>
+                            <option value="nissan-rogue">Nissan Rogue</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="question-three">
+
+                </div>
+
+            </form>
+            <div class="model-display-window">
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer-nav">
+
+    </footer>
 </body>
 </html>

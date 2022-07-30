@@ -39,23 +39,7 @@ function tankModel(){
     directionalLight = new THREE.DirectionalLight(spotlightColor,100); //0xc5c5c5
     directionalLight.position.set(0,1,0);
     directionalLight.castShadow = true;
-    sceneWin.add(directionalLight);
-
-    /*light = new THREE.PointLight(spotlightColor,10);
-    light.position.set(0,300,500);
-    sceneWin.add(light);
-
-    light2 = new THREE.PointLight(spotlightColor,10);
-    light2.position.set(500,100,0);
-    sceneWin.add(light2);
-
-    light3 = new THREE.PointLight(spotlightColor,10);
-    light3.position.set(0,100,-500);
-    sceneWin.add(light3);
-
-    light4 = new THREE.PointLight(spotlightColor,10);
-    light4.position.set(-500,300,0);
-    sceneWin.add(light4);  */                      
+    sceneWin.add(directionalLight);                      
 
     let loaderWin = new THREE.GLTFLoader();
     loaderWin.load("tankModel/scene.gltf", function(gltf){        
