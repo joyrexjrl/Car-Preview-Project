@@ -10,11 +10,12 @@
     <script src="jsCore/three.min.js"></script>
     <script src="jsCore/GLTFLoader.js"></script>
     <script src="jsCore/OrbitControls.js"></script>
-    <script src="checkboxSelector.js"></script>
+    <script src="checkboxSelector.js" defer></script>
     <!-- models to be loaded in start -->
     <script src="fwdVehicleModelLoader.js" defer></script>
     <script src="rwdVehicleModelLoader.js" defer></script>
     <script src="awdVehicleModelLoader.js" defer></script>
+    <script src="modelDisplayWindow.js" defer></script>
     <!-- models to be loaded in end -->
 </head>
 <body>
@@ -23,26 +24,14 @@
     </nav>    
     <main class="container">
         <section class="top-model-display flex">
-            <div class="top-model-display-container">
-                <div id="fwd-left-window" class="model-loaded fwd-window">
-                    
-                </div>
+            <div id="fwd-left-window" class="top-model-display-container model-loaded">
+                
             </div>
-            <div class="top-model-display-container">
-                <div id="fwd-center-window" class="model-loaded fwd-window model-unloaded">
-                    
-                </div>
-                <div id="rwd-center-model"  class="model-loaded rwd-window">
+            <div id="rwd-center-model" class="top-model-display-container model-loaded">
 
-                </div>
-                <div id="awd-center-window" class="model-loaded awd-window model-unloaded">
-
-                </div>
             </div>
-            <div class="top-model-display-container">
-                <div id="awd-right-window" class="model-loaded">
+            <div id="awd-right-window" class="top-model-display-container model-loaded">
 
-                </div>
             </div>
         </section>
         <section class="form-display flex">
@@ -50,43 +39,43 @@
                 <div class="question-one">
                     <div class="drive-type flex">
                         <div class="flex col">
-                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <input id="fwd-checkbox" type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this), vehicleType()">
                             <label for="drive-type">Front wheel drive</label>                        
                         </div>
                         
                         <div class="flex col">
-                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <input  id="rwd-checkbox" type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this), vehicleType()">
                             <label for="drive-type">Rear wheel drive</label>                        
                         </div>
                         
                         <div class="flex col">
-                            <input type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this)">
+                            <input  id="awd-checkbox" type="checkbox" id="drive-type" name="drive-type" onclick="onlyOne(this), vehicleType()">
                             <label for="drive-type">All wheel drive</label>                        
                         </div>                    
                     </div>
                 </div>
                 <div class="question-two flex col">
-                    <div id="fwd" class="drive-options">
+                    <div id="fwd-dropdown" class="drive-options hide-element">
                         <select class="drive-options-select" name="fwd">
-                            <option value="--select-a-vehicle--">--Select a vehicle--</option>
+                            <option value="--select-a-vehicle--">--Select a vehicle (fwd)--</option>
                             <option value="honda-accord">Honda Accord</option>
                             <option value="honda-civic-type-r">Honda Civic Type R</option>
                             <option value="volvo-v90">Volvo V90</option>
                             <option value="mercedes-a-class">Mercedes A Class</option>
                         </select>
                     </div>
-                    <div id="rwd" class="drive-options">
+                    <div id="rwd-dropdown" class="drive-options hide-element">
                         <select class="drive-options-select" name="rwd">
-                            <option value="--select a vehicle--">--Select a vehicle--</option>
+                            <option value="--select a vehicle--">--Select a vehicle (rwd)--</option>
                             <option value="chevrolet-camaro">Chevrolet Camaro</option>
                             <option value="ford-mustang">Ford Mustang</option>
                             <option value="genesis-g70">Genesis G70</option>
                             <option value="kia-stinger">Kia Stinger</option>
                         </select>
                     </div>
-                    <div id="awd" class="drive-options">
+                    <div id="awd-dropdown" class="drive-options hide-element">
                         <select class="drive-options-select" name="awd">
-                            <option value="--select a vehicle--">--Select a vehicle--</option>
+                            <option value="--select a vehicle--">--Select a vehicle (awd)--</option>
                             <option value="subaru-impreza">Subaru Impreza</option>
                             <option value="toyota-highlander">Toyota Highlander</option>
                             <option value="ford-escape">Ford Escape</option>
