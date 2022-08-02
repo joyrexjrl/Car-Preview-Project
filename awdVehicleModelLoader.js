@@ -6,7 +6,7 @@ var modelLocationAwd = 'awdVehicleModel/scene.gltf';
 var awdWindowed = document.getElementById(elementIDAwd);
 var awdWindowedWidth = document.getElementById(elementIDAwd).clientWidth;
 var awdWindowedHeight = document.getElementById(elementIDAwd).clientHeight;
-var awdModelScale = 180;
+var awdModelScale = 200;
 
 function awdVehicleLoader(){
     const spotlightColor = 0x111111;

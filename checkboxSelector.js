@@ -12,6 +12,13 @@ const fwdDropdown = document.getElementById("fwd-dropdown");
 const rwdDropdown = document.getElementById("rwd-dropdown");
 const awdDropdown = document.getElementById("awd-dropdown");
 
+addEventListener('load', (event) => {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i<inputs.length; i++){
+        inputs[i].checked = false;
+    }
+})
+
 function onlyOne(checkbox){
     var checkboxes = document.getElementsByName("drive-type");
     checkboxes.forEach((item) => {
@@ -29,7 +36,7 @@ function vehicleType(){
         rwdDropdown.classList.add("hide-element");
         awdDropdown.classList.add("hide-element");
 
-        modelDisplayer.clear();
+        //modelDisplayer.clear();
     }
 
     if(fwdCheckbox.checked){
@@ -41,12 +48,12 @@ function vehicleType(){
         rwdDropdown.classList.add("hide-element");
         awdDropdown.classList.add("hide-element");
 
-        modelDisplayer.add(disWinModelLoader("fwdVehicleModel/scene.gltf", 0.3));
-        console.log(modelDisplayer);
-        renderDisWin();
+        //modelDisplayer.add(disWinModelLoader("fwdVehicleModel/scene.gltf", 0.3));
+        //console.log(modelDisplayer);
+        //renderDisWin();
     }else{
-        modelDisplayer.clear();
-        console.log(modelDisplayer);
+        //modelDisplayer.clear();
+        //console.log(modelDisplayer);
     }
 
     if(rwdCheckbox.checked){

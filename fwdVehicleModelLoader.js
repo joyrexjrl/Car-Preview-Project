@@ -65,4 +65,4 @@ function renderFwdWin(){
     rendererFwdModel.render(sceneFwdModel, cameraFwdModel);
 }
 
-fwdVehicleLoader();
+//fwdVehicleLoader();
