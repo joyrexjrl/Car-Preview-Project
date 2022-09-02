@@ -12,6 +12,9 @@ const fwdDropdown = document.getElementById("fwd-dropdown");
 const rwdDropdown = document.getElementById("rwd-dropdown");
 const awdDropdown = document.getElementById("awd-dropdown");
 
+const partsDropdown = document.getElementById("parts-dropdown");
+const imageDisplayWindow = document.getElementById("temp-image-display-window");
+
 addEventListener('load', (event) => {
     var inputs = document.getElementsByTagName('input');
     for(var i = 0; i<inputs.length; i++){
@@ -35,6 +38,7 @@ function vehicleType(){
         fwdDropdown.classList.add("hide-element");
         rwdDropdown.classList.add("hide-element");
         awdDropdown.classList.add("hide-element");
+        partsDropdown.classList.add("hide-element");
 
         //modelDisplayer.clear();
     }
@@ -47,6 +51,7 @@ function vehicleType(){
         fwdDropdown.classList.remove("hide-element");
         rwdDropdown.classList.add("hide-element");
         awdDropdown.classList.add("hide-element");
+        partsDropdown.classList.remove("hide-element");
 
         //modelDisplayer.add(disWinModelLoader("fwdVehicleModel/scene.gltf", 0.3));
         //console.log(modelDisplayer);
@@ -64,6 +69,7 @@ function vehicleType(){
         fwdDropdown.classList.add("hide-element");
         rwdDropdown.classList.remove("hide-element");
         awdDropdown.classList.add("hide-element");
+        partsDropdown.classList.remove("hide-element");
     }
 
     if(awdCheckbox.checked){
@@ -74,5 +80,6 @@ function vehicleType(){
         fwdDropdown.classList.add("hide-element");
         rwdDropdown.classList.add("hide-element");
         awdDropdown.classList.remove("hide-element");
+        partsDropdown.classList.remove("hide-element");
     }
 }
