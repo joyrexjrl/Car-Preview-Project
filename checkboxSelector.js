@@ -13,7 +13,29 @@ const rwdDropdown = document.getElementById("rwd-dropdown");
 const awdDropdown = document.getElementById("awd-dropdown");
 
 const partsDropdown = document.getElementById("parts-dropdown");
-const imageDisplayWindow = document.getElementById("temp-image-display-window");
+const partsImageSelection = document.getElementById("parts-image");
+const imageDisplayWindow = document.getElementById("model-display-window");
+
+function changeBGImage(){
+    imageDisplayWindow.style.backgroundImage = "url('')";
+
+    if(partsImageSelection.value === "3-star-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/3-STAR-FLANGE.gif')";
+    else if(partsImageSelection.value === "4-bolt-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/4-Bolt-Flange.gif')";
+    else if(partsImageSelection.value === "4-star-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/4-STAR-FLANGE.gif')";
+    else if(partsImageSelection.value === "6-bolt-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/6-Bolt-Flange.gif')";
+    else if(partsImageSelection.value === "center-support-bearing") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Center-Support-Bearing.gif')";
+    else if(partsImageSelection.value === "driveshaft-tube") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Driveshaft-Tube.gif')";
+    else if(partsImageSelection.value === "flange-yoke-1944") imageDisplayWindow.style.backgroundImage = "url('images/gifs/FLANGE-YOKE-1944.gif')";
+    else if(partsImageSelection.value === "flange-yoke-jk") imageDisplayWindow.style.backgroundImage = "url('images/gifs/FLANGE-YOKE-JK.gif')";
+    else if(partsImageSelection.value === "flange-yoke") imageDisplayWindow.style.backgroundImage = "url('images/gifs/FLANGE-YOKE.gif')";
+    else if(partsImageSelection.value === "slip-yoke") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Slip-Yoke.gif')";
+    else if(partsImageSelection.value === "stub-shaft") imageDisplayWindow.style.backgroundImage = "url('images/gifs/STUB-SHAFT.gif')";
+    else if(partsImageSelection.value === "trans-yoke") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Trans-Yoke.gif')";
+    else if(partsImageSelection.value === "transfer-case") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Transfer-Case.gif')";
+    else if(partsImageSelection.value === "transmission-rear-end") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Transmission-Rear-End.gif')";
+    else if(partsImageSelection.value === "transmission-tail-housing") imageDisplayWindow.style.backgroundImage = "url('images/gifs/Transmission-Tail-Housing.gif')";
+    else if(partsImageSelection.value === "weld-yoke") imageDisplayWindow.style.backgroundImage = "url('images/gifs/WELD-YOKE.gif')";
+}
 
 addEventListener('load', (event) => {
     var inputs = document.getElementsByTagName('input');

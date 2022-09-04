@@ -144,9 +144,13 @@ body{
 /* form style end */
 
 .model-display-window{
-    width: 70%;
+    background-image: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70%;    
+    height: 600px;
+    object-fit: contain;
     border: 1px solid red;
-    height: 550px;
 }
 
 .footer-nav{
