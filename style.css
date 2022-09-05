@@ -67,7 +67,6 @@ svg {
 body{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color: #555555;
 }
 
@@ -82,21 +81,20 @@ body{
 .main-nav,
 .footer-nav{
     background-color: rgb(136, 0, 0);
-    border-top: 1px solid black;
+    /*border-top: 1px solid black;*/
     height: 100px;
 }
 
 .container{
     width: 80%;
-    min-height: 80vh;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     margin-inline: auto;
     position: relative;
 }
 
 .top-model-display{
     width: 100%;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     height: 400px;
     justify-content: space-between;
 }
@@ -104,7 +102,7 @@ body{
 .model-loaded{
     width: 100%;
     height: 100%;
-    border: 1px solid rgb(66, 63, 199);
+    /*border: 1px solid rgb(66, 63, 199);*/
 }
 
 .hide-element{
@@ -120,7 +118,7 @@ body{
 
 .form-questions{
     width: 25%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .drive-type{
@@ -134,7 +132,7 @@ body{
 
 .drive-options{
     width: 100%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .drive-options-select{
@@ -144,13 +142,15 @@ body{
 /* form style end */
 
 .model-display-window{
-    background-image: "";
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 70%;    
-    height: 600px;
+    width: 70%;
+    /*border: 1px solid red;*/
+}
+
+#image-display-window{
+    margin-inline: auto;
+    width: 70%;
     object-fit: contain;
-    border: 1px solid red;
+    /*border: 1px solid orange;*/
 }
 
 .footer-nav{

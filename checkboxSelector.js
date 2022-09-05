@@ -14,10 +14,14 @@ const awdDropdown = document.getElementById("awd-dropdown");
 
 const partsDropdown = document.getElementById("parts-dropdown");
 const partsImageSelection = document.getElementById("parts-image");
-const imageDisplayWindow = document.getElementById("model-display-window");
+const imageDisplayWindow = document.getElementById("image-display-window");
 
 function changeBGImage(){
     imageDisplayWindow.style.backgroundImage = "url('')";
+    imageDisplayWindow.style.height = ("400px");
+    imageDisplayWindow.style.backgroundRepeat = "no-repeat";
+    imageDisplayWindow.style.backgroundPosition = "center";
+    imageDisplayWindow.style.backgroundSize = "contain";
 
     if(partsImageSelection.value === "3-star-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/3-STAR-FLANGE.gif')";
     else if(partsImageSelection.value === "4-bolt-flange") imageDisplayWindow.style.backgroundImage = "url('images/gifs/4-Bolt-Flange.gif')";
